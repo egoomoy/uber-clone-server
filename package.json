@@ -1,0 +1,45 @@
+{
+  "name": "uber-clone-server",
+  "version": "1.0.0",
+  "description": "server for uber clone, graphQL, React, nodeJS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql",
+    "pretypes": "gql-merge --out-file ./src/schema.graphql ./src/api/**/**.graphql",
+    "types": "graphql-to-typescript ./src/schema.graphql ./src/types/graph.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdwinGoo/uber-clone-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdwinGoo/uber-clone-server/issues"
+  },
+  "homepage": "https://github.com/EdwinGoo/uber-clone-server#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.5",
+    "@types/helmet": "^0.0.43",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^12.0.2",
+    "babel-runtime": "^6.26.0",
+    "gql-merge": "^0.0.6",
+    "graphql-to-typescript": "^0.1.2",
+    "nodemon": "^1.19.0",
+    "ts-node": "^8.1.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "graphql-tools": "^4.0.4",
+    "graphql-yoga": "^1.17.4",
+    "helmet": "^3.18.0",
+    "merge-graphql-schemas": "^1.5.8",
+    "morgan": "^1.9.1",
+    "pg": "^7.11.0",
+    "typeorm": "^0.2.17"
+  }
+}
