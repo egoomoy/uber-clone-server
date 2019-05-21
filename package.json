@@ -4,6 +4,7 @@
   "description": "server for uber clone, graphQL, React, nodeJS",
   "main": "index.js",
   "scripts": {
+    "predev": "yarn run types",
     "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql",
     "pretypes": "gql-merge --out-file ./src/schema.graphql ./src/api/**/**.graphql",
     "types": "graphql-to-typescript ./src/schema.graphql ./src/types/graph.d.ts"
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/EdwinGoo/uber-clone-server#readme",
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@types/cors": "^2.8.5",
     "@types/helmet": "^0.0.43",
     "@types/morgan": "^1.7.35",
@@ -32,6 +34,8 @@
     "typescript": "^3.4.5"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "class-validator": "^0.9.1",
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
     "graphql-tools": "^4.0.4",
