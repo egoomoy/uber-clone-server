@@ -1,5 +1,5 @@
 type Place {
-  id: INT!
+  id: Int!
   name: String!
   lat: Float!
   lng: Float!
