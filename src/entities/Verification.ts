@@ -1,11 +1,11 @@
 import {
   BaseEntity,
-  Entity,
+  BeforeInsert,
   Column,
-  PrimaryColumn,
   CreateDateColumn,
-  UpdateDateColumn,
-  BeforeInsert
+  Entity,
+  PrimaryColumn,
+  UpdateDateColumn
 } from "typeorm";
 import { verificationTaget } from "src/types/types";
 
