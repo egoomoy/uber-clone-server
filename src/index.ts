@@ -19,6 +19,8 @@ const handleAppStat = () => {
   console.log("listening on port ${PORT}.");
 };
 
-createConnection(connectionOptions).then(() => {
-  app.start(appOption, handleAppStat);
-});
+createConnection(connectionOptions)
+  .then(() => {
+    app.start(appOption, handleAppStat);
+  })
+  .catch(error => console.log(error));

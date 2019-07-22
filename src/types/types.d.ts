@@ -1,4 +1,4 @@
-export type verificationTaget = "PHONE" | "EMAIL";
+export type verificationTarget = "PHONE" | "EMAIL";
 export type rideStatus =
   | "ACCEPTED"
   | "FINISHED"
