@@ -6,33 +6,33 @@ Server for the Uber Clone Course on Nomad Academy. GraphQL, Typescript, NodeJS
 
 ### Public Resolvers:
 
-- [ ] Sign In / Sign Up with Facebook
-- [ ] Sign In with Email
-- [ ] Start Phone Number Verification
-- [ ] Complete Phone Number Verification
-- [ ] Sign Up with Email
+- [x] Sign In / Sign Up with Facebook
+- [x] Sign In with Email
+- [x] Start Phone Number Verification
+- [x] Complete Phone Number Verification
+- [x] Sign Up with Email
 
 ---
 
 ### Authentication:
 
-- [ ] Generate JWT
-- [ ] Verifiy JWT
+- [x] Generate JWT
+- [x] Verifiy JWT
 
 ---
 
 ### Private Resolvers:
 
-- [ ] Get my Profile
-- [ ] Request Email Verification
-- [ ] Complete Email Verification
-- [ ] Update my Profile
-- [ ] Toggle Driving Mode
-- [ ] Report Location / Orientation
-- [ ] Add Place
-- [ ] Edit Place
-- [ ] Delete Place
-- [ ] Get My Places
+- [x] Get my Profile
+- [x] Request Email Verification
+- [x] Complete Email Verification
+- [x] Update my Profile
+- [x] Toggle Driving Mode
+- [x] Report Location / Orientation
+- [x] Add Place
+- [x] Edit Place
+- [x] Delete Place
+- [x] Get My Places
 - [ ] See Nearby Drivers
 - [ ] Subscribe to Nearby Drivers
 - [ ] Request a Ride
