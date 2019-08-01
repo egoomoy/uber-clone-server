@@ -18,7 +18,10 @@ const resolvers: Resolvers = {
           const place = await Place.findOne({ id: args.placeId });
           if (place) {
             if (place.userId === user.id) {
-              const notNull = cleanNullArgs(args);
+              const notNull: any = cleanNullArgs(args);
+              if (notNull.placeId !== null) {
+                delete notNull.placeId;
+              }
               await Place.update({ id: args.placeId }, { ...notNull });
               return {
                 ok: true,
@@ -27,24 +30,23 @@ const resolvers: Resolvers = {
             } else {
               return {
                 ok: false,
-                error: "user id not found"
+                error: "Not Authorized"
               };
             }
           } else {
             return {
               ok: false,
-              error: "place not found"
+              error: "Place not found"
             };
           }
         } catch (error) {
           return {
             ok: false,
-            error: error.messase
+            error: error.message
           };
         }
       }
     )
   }
 };
-
 export default resolvers;
