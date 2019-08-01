@@ -20,7 +20,7 @@ const resolvers: Resolvers = {
         if (notNull.password) {
           user.password = notNull.password;
           user.save();
-          delete notNull.password;
+          delete notNull.password; // 이 부분이 찝찝하군, delete 된다고 하더라도, 로직에서 한번은 비밀번호가 유출 될 가능성이 존재한다.
         }
         try {
           await User.update({ id: user.id }, { ...notNull });
