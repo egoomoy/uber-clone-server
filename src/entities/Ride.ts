@@ -3,9 +3,9 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  ManyToOne,
   PrimaryGeneratedColumn,
-  UpdateDateColumn,
-  ManyToOne
+  UpdateDateColumn
 } from "typeorm";
 import { rideStatus } from "../types/types";
 import User from "./User";
