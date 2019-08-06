@@ -6,9 +6,9 @@ type UpdateRideStatusResponse {
 enum StatusOptions {
   ACCEPTED
   FINISHED
-  CANCELED
   REQUESTING
   ONROUTE
+  CANCELED
 }
 
 type Mutation {

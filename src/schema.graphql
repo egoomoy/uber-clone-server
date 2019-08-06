@@ -57,6 +57,7 @@ type GetMyPlacesResponse {
 type Query {
   GetMyPlaces: GetMyPlacesResponse!
   GetNearByRide: GetNearByRideResponse!
+  GetRide(rideId: Int!): GetRideResponse!
   GetMyProfile: GetMyProfileResponse!
   GetNearbyDrivers: GetNearbyDriversResponse!
   user: User
@@ -81,8 +82,15 @@ type GetNearByRideResponse {
   ride: Ride
 }
 
+type GetRideResponse {
+  ok: Boolean!
+  error: String
+  ride: Ride
+}
+
 type Subscription {
   NearbyRideSubscription: Ride
+  RideStatusSubscription: Ride
   DriversSubscription: User
 }
 
@@ -105,7 +113,9 @@ type Ride {
   distance: String!
   duration: String!
   driver: User!
+  driverId: Int
   passenger: User!
+  passengerId: Int!
   createdAt: String!
   updatedAt: String
 }
@@ -118,9 +128,9 @@ type UpdateRideStatusResponse {
 enum StatusOptions {
   ACCEPTED
   FINISHED
-  CANCELED
   REQUESTING
   ONROUTE
+  CANCELED
 }
 
 type CompleteEmailVerificationResponse {
