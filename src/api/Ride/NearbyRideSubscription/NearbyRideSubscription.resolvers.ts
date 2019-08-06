@@ -9,7 +9,7 @@ const resolvers = {
         (payload, _, { context }) => {
           const user: User = context.currentUser;
           const {
-            DriversSubscription: { PickUpLat, PickUpLng }
+            NearbyRideSubscription: { PickUpLat, PickUpLng }
           } = payload;
           const { lastLat: userLastLat, lastLng: userLastLng } = user;
           return (
