@@ -37,7 +37,7 @@ const resolvers: Resolvers = {
         } else {
           return {
             ok: false,
-            error: "You can't request two rides or drive and request",
+            error: "You can't request two rides",
             ride: null
           };
         }

@@ -1,4 +1,4 @@
-import Chat from "src/entities/Chat";
+import Chat from "../../../entities/Chat";
 import User from "../../../entities/User";
 import { GetChatQueryArgs, GetChatResponse } from "../../../types/graph";
 import { Resolvers } from "../../../types/resolvers";

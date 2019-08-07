@@ -1,5 +1,5 @@
 import { withFilter } from "graphql-yoga";
-import User from "src/entities/User";
+import User from "../../../entities/User";
 
 const resolvers = {
   Subscription: {
@@ -9,18 +9,19 @@ const resolvers = {
         (payload, _, { context }) => {
           const user: User = context.currentUser;
           const {
-            NearbyRideSubscription: { PickUpLat, PickUpLng }
+            NearbyRideSubscription: { pickUpLat, pickUpLng }
           } = payload;
           const { lastLat: userLastLat, lastLng: userLastLng } = user;
           return (
-            PickUpLat >= userLastLat - 0.05 &&
-            PickUpLat <= userLastLat + 0.05 &&
-            PickUpLng >= userLastLng - 0.05 &&
-            PickUpLng <= userLastLng + 0.05
+            pickUpLat >= userLastLat - 0.05 &&
+            pickUpLat <= userLastLat + 0.05 &&
+            pickUpLng >= userLastLng - 0.05 &&
+            pickUpLng <= userLastLng + 0.05
           );
         }
       )
     }
   }
 };
+
 export default resolvers;
