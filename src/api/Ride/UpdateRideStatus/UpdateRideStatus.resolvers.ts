@@ -45,13 +45,10 @@ const resolvers: Resolvers = {
                 driver: user
               });
             }
-
             if (ride) {
               ride.status = args.status;
-              user.isTaken = true;
               ride.save();
               pubSub.publish("rideUpdate", { RideStatusSubscription: ride });
-
               return {
                 ok: true,
                 error: null
@@ -71,7 +68,7 @@ const resolvers: Resolvers = {
         } else {
           return {
             ok: false,
-            error: " U are not driver"
+            error: "You are not driving"
           };
         }
       }
